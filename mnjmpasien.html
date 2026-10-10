@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Data Pasien - Klinik Rawat Jalan</title>
+  <link rel="stylesheet" href="mnjmpasien.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="brand">Klinik Rawat Jalan</span>
+    <nav>
+      <a href="#" class="active">Pasien</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Tambah data pasien</h1>
+      <p>Isi profil dasar pasien. Kolom bertanda <span class="req">*</span> wajib diisi.</p>
+    </div>
+
+    <form class="card" action="#" method="POST">
+
+      <fieldset>
+        <legend>Identitas pasien</legend>
+
+        <div class="field">
+          <label for="nama_pasien">Nama pasien <span class="req">*</span></label>
+          <input type="text" id="nama_pasien" name="nama_pasien"
+                 placeholder="Contoh: Siti Rahmawati" required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="tanggal_lahir">Tanggal lahir <span class="req">*</span></label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+          </div>
+
+          <div class="field">
+            <label for="no_rekam_medis">No. rekam medis <span class="req">*</span></label>
+            <input type="text" id="no_rekam_medis" name="no_rekam_medis"
+                   placeholder="Contoh: RM-000123" required>
+            <small>Nomor unik untuk setiap pasien.</small>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Domisili &amp; kontak</legend>
+
+        <div class="field">
+          <label for="domisili">Domisili <span class="req">*</span></label>
+          <textarea id="domisili" name="domisili" rows="3"
+                    placeholder="Alamat tempat tinggal saat ini" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="kontak_darurat">Kontak darurat <span class="req">*</span></label>
+          <input type="tel" id="kontak_darurat" name="kontak_darurat"
+                 placeholder="Contoh: 081234567890" pattern="[0-9+\- ]{8,15}" required>
+          <small>Nomor keluarga atau orang terdekat yang bisa dihubungi.</small>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="reset" class="btn btn-ghost">Reset</button>
+        <button type="submit" class="btn btn-primary">Simpan pasien</button>
+      </div>
+
+    </form>
+  </main>
+
+</body>
+</html>
